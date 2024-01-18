@@ -52,14 +52,14 @@ function on_input(self, action_id, action)
 	if action_id == hash("player1_left") then
 		if action.pressed then
 			msg.post("#sprite", "play_animation", {id = hash("player_left")})
-			self.rotation_direction.x = -200
+			self.rotation_direction.x = -2000
 		elseif action.released then
 			self.rotation_direction.x = 0
 		end
 	elseif action_id == hash("player1_right") then
 		if action.pressed then
 			msg.post("#sprite", "play_animation", {id = hash("player_right")})
-			self.rotation_direction.x = 200
+			self.rotation_direction.x = 2000
 		elseif action.released then
 			self.rotation_direction.x = 0
 		end

@@ -1,6 +1,6 @@
 go.property("angular_velocity", 3)
-FRICTION = 1
-JUMP_SPEED = 5000
+FRICTION = 20
+JUMP_VELOCITY =  500
 GRAVITY = 10
 
 function init(self)
@@ -14,6 +14,8 @@ function init(self)
 	self.safePosition = go.get_position()
 	self.follow = true
 	msg.post("#", "acquire_input_focus") 
+	self.debug = false
+	self.jumpdelay = 0
 end
 
 function final(self)
@@ -90,27 +92,51 @@ function checkFall(self)
 end
 
 function handlejump(self, dt)
+	local rotation = go.get_rotation()
+	local direction = vmath.vector3(1,0,0)
+	local updateddirection = vmath.rotate(rotation, direction)
+	local angle = math.deg(math.atan2(-updateddirection.y, updateddirection.x))
 	if self.jumping == true then
-		print("Jump")
-		self.velocity.y = self.velocity.y + 500 * dt
-		self.jumping = false
-		self.canJump = false
+		if angle == 0 then
+			self.velocity.y = self.velocity.y + 500 * dt
+			self.jumping = false
+			self.canJump = false
+		elseif angle > 0 then
+			angle = 90 - angle
+			angle = math.rad(angle)
+			print("1y: ",self.velocity.y,"1x: ",self.velocity.x, angle, "right")
+			self.velocity.y = self.velocity.y + (math.sin(angle) * 10) 
+			self.velocity.x = self.velocity.x + (math.cos(angle) * 10)
+			print("ySin: ",(math.sin(angle)*20),"xCos: ",(math.cos(angle)*20))
+			print("2y: ",self.velocity.y,"2x: ",self.velocity.x, angle)
+			self.jumping = false
+			self.canJump = false
+			self.debug = false
+		elseif angle < 0 then
+			print("Jum2")
+			angle = -angle
+			angle = 90 - angle
+			angle = math.rad(angle)
+			self.velocity.y = self.velocity.y + (math.sin(angle) * 10)
+			self.velocity.x = self.velocity.x - (math.cos(angle) * 10)
+			print("y: ",self.velocity.y,"x: ",self.velocity.x, angle)
+			self.jumping = false
+			self.canJump = false
+			self.debug = false
+		end
 	end
-	local quat_to_north = vmath.quat_rotation_z(math.rad(0)) -- the rotation around z to rotate to due north
-	print(quat_to_north)
-	local parent_quat = go.get_world_rotation()-- the parent's world rotation
-	local diff_quat = vmath.quat_from_to(quat_to_north, parent_quat.z)
-	local angle_to_north = vmath.quat_to_angle(diff_quat).z
-	print(angle_to_north)
 end
-function update(self, dt)
+
+function update(self, dt) 
 	self.velocity.y = self.velocity.y - GRAVITY * dt
-	--self.velocity.y = clamp(y, self.velocity.y, -500, 500)
-	self.velocity.x = self.velocity.x - FRICTION * dt
-	self.velocity.x = clamp(x, self.velocity.x, 0, 0)
-	handlejump(self, dt)
+	if self.velocity.x < 0 and self.onGround == true then 
+		self.velocity.x = self.velocity.x + FRICTION * dt
+	elseif self.velocity.x > 0 and self.onGround == true then
+		self.velocity.x = self.velocity.x - FRICTION * dt 
+	end
 	checkFall(self)
 	rotation = handleRot2(self, dt)
+	handlejump(self, dt)
 	local pos = go.get_position()
 	pos = pos + self.velocity 
 	go.set_position(pos)
@@ -173,6 +199,13 @@ function on_input(self, action_id, action)
 		msg.post("camera", "follow")
 	else
 		msg.post("camera", "unfollow")
+	end
+	if action_id == hash("debug") then
+		local rotation = go.get_rotation()
+		local direction = vmath.vector3(1,0,0)
+		local updateddirection = vmath.rotate(rotation, direction)
+		local angle = math.deg(math.atan2(-updateddirection.y, updateddirection.x))
+		print("angle: ",angle," x vel: ",self.velocity.x," y vel: ",self.velocity.y)
 	end
 end
 

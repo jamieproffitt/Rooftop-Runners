@@ -10,6 +10,10 @@ key_trigger {
   input: KEY_W
   action: "player1_jump"
 }
+key_trigger {
+  input: KEY_ENTER
+  action: "debug"
+}
 mouse_trigger {
   input: MOUSE_BUTTON_1
   action: "touch"

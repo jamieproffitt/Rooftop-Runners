@@ -1,4 +1,5 @@
 
 #player1_right
  player1_left
-6player1_jump	touch
+6player1_jump
+	\debug	touch

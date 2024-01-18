@@ -1843,7 +1843,7 @@ pcallreturn 	load__call __index   	safe
 
 G setmetatable error loadstring setfenv data  8opts  8env 'f 
 res   _   
-*‹   X€-   BH€< FRıL  À          pairs a  b    k v   a   -    - 5   B C ÀÀ compact	name_sparse       s merge a  opts   \   -    - 5   B C ÀÀ sortkeyscomment       s merge a  opts   f   -    - 5   B C ÀÀ sortkeyscommentindent         s merge a  opts   	 $_½„'   ' ' ' 4 6 *  B' <6 * B' <6 )  B' <5 6	   X€6	 9
+*‹   X€-   BH€< FRıL  À          pairs a  b    k v   a   -    - 5   B C ÀÀ sparsecompact	name_       s merge a  opts   \   -    - 5   B C ÀÀ sortkeyscomment       s merge a  opts   f   -    - 5   B C ÀÀ indent  commentsortkeys       s merge a  opts   	 $_½„'   ' ' ' 4 6 *  B' <6 * B' <6 )  B' <5 6	   X€6	 9
   X€6
  3 4  4	  6
   
@@ -1863,8 +1863,8 @@ falseforfunction	gotoifin
 localnilnotorrepeatreturn	then	true
 until
 whileipairs	_ENV_G getmetatable
-debug thread
-cdatauserdata0/0-1/0 --[[-math.huge]]1/0 --[[math.huge]]tostring&Lua serializer and pretty printerPaul Kulchenko	0.30serpent€€Àÿ€€Àÿ 
+debug userdatathread
+cdata0/0-1/0 --[[-math.huge]]1/0 --[[math.huge]]tostring&Lua serializer and pretty printerPaul Kulchenko	0.30serpent€€Àÿ€€Àÿ 
 
 
 x…‡ˆˆˆˆˆˆ‰ŠŠ‹‹ŒŒŒŒtonumber error setmetatable loadstring setfenv n ]v  ]c [d  [snum Jbadtype Igetmetatable Apairs @keyword :globals  :G  :  _ k    k v    _ g    k v  s 
@@ -2242,16 +2242,16 @@ _ frame  _ _  len  res 	_ O_  Ostream  Omode  Oresp ;err  ;_ )_  )sta
 pause	done	coro	moaion
 startconnecthandlescratchpad	looplistenremovebreakpointsetbreakpoint                               linemap	dump	line   )execution aborted at default debugee
 print   
+WATCH
 BREAK
-STACKRESTART
-WATCH __modekbuiltins.scripts.socketoff/library
+STACKRESTART __modekbuiltins.scripts.socketoff/library
 /proc	openioDYLD_LIBRARY_PATH[Ww]indows
 matchOSWINDIR   	wrapstatus_status
 yield_yieldresume_resumecreate_createcoroutinengx	type__indexgetmetatableMOAICoroutinejit	_ENV_G	findsub	gsubstringrawgetunpack
 tablesetmetatable
 pairs	loadloadstringsetfenvgetfenv
-errorlcr	portMOBDEBUG_PORTtonumbergetenv _VERSION	0.70_COPYRIGHTPaul Kulchenkoyieldtimeoutû¨¸½áõÑü
-_NAMEmobdebugcheckcountÈconnecttimeout_DESCRIPTION<Mobile Remote Debugger for the Lua programming language osrequire                         ! " # # # # $ % & ' ' ' ' ' ( ) ) ) ) ) ) 2 2 2 2 3 3 3 3 4 4 4 4 < < < < < < < < < = = = = = = = = = = = = = = = > > > > > > > > ? ? ? ? ? ? ? ? @ @ @ @ @ @ @ @ A A A A A A A A B B D D N O S S \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ d d d d d d d f f f g i i i i i j k l m o p q r s t u v w y z z z { |  ‚ ![bin™ËÒŞéôû,Ğæêş".0j©íñõ!Œ´¾ÀÓÖ×ØÙÚÛÜİŞßàáâããääåæææææææççèèêêrequire ¢os œmobdebug HOOKMASK Œerror ‹getfenv Šsetfenv ‰loadstring …pairs „setmetatable ƒtonumber ‚unpack ırawget ügsub ösub  öfind  ögenv òjit îMOAICoroutine êmetagindex 	ángx Òcorocreate Êcororesume Âcoroyield ºcorostatus ²corowrap °findenv win ‘mac |iscasepreserving osocket 
+errorlcr	portMOBDEBUG_PORTtonumbergetenv checkcountÈ_VERSION	0.70_DESCRIPTION<Mobile Remote Debugger for the Lua programming languageconnecttimeout_COPYRIGHTPaul Kulchenkoyieldtimeoutû¨¸½áõÑü
+_NAMEmobdebug osrequire                         ! " # # # # $ % & ' ' ' ' ' ( ) ) ) ) ) ) 2 2 2 2 3 3 3 3 4 4 4 4 < < < < < < < < < = = = = = = = = = = = = = = = > > > > > > > > ? ? ? ? ? ? ? ? @ @ @ @ @ @ @ @ A A A A A A A A B B D D N O S S \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ d d d d d d d f f f g i i i i i j k l m o p q r s t u v w y z z z { |  ‚ ![bin™ËÒŞéôû,Ğæêş".0j©íñõ!Œ´¾ÀÓÖ×ØÙÚÛÜİŞßàáâããääåæææææææççèèêêrequire ¢os œmobdebug HOOKMASK Œerror ‹getfenv Šsetfenv ‰loadstring …pairs „setmetatable ƒtonumber ‚unpack ırawget ügsub ösub  öfind  ögenv òjit îMOAICoroutine êmetagindex 	ángx Òcorocreate Êcororesume Âcoroyield ºcorostatus ²corowrap °findenv win ‘mac |iscasepreserving osocket 
 ecoro_debugger dcoro_debugee  dcoroutines cevents ^breakpoints ]watches \lastsource [lastfile  [watchescnt Zabort Yseen_hook Xcheckcount Wstep_into Vstep_over Ustep_level Tstack_level Sserver Rbuf  Routputs Qiobase Nbasedir Mdeferror Ldebugee Kq Jserpent Hremovebasedir @stack ?set_breakpoint >remove_breakpoint =has_breakpoint <restore_vars ;capture_vars :stack_depth 9is_safe 8in_debugger 7is_pending 6readnext 5handle_breakpoint 4normalize_path 3debug_hook 2stringify_results 1isrunning 0done /debugger_loop .output -connect ,lasthost +lastport  +start *listen )controller (scratchpad 'loop &on %off $handle #cocreate "coro !moconew  moai   "û€LJ@builtins/scripts/mobdebug.luaa  
 '6  -    B  X€ X€+  L  À
 pcallrequire module  ok res   ’  -G) U€6  9   B X€  J    Xò+  L 	_ENVgetupvalue
@@ -2326,7 +2326,7 @@ pcallreturn 	load__call __index   	safe
 
 G setmetatable error loadstring setfenv data  8opts  8env 'f 
 res   _ 	  
-*‹   X€-   BH€< FRıL  À          pairs a  b    k v   a 	  -    - 5   B C ÀÀ sparse	name_compact       s merge a  opts   \ 	  -    - 5   B C ÀÀ commentsortkeys       s merge a  opts   f 	  -    - 5   B C ÀÀ commentindent  sortkeys       s merge a  opts   	 $_½„'   ' ' ' 4 6 *  B' <6 * B' <6 )  B' <5 6	   X€6	 9
+*‹   X€-   BH€< FRıL  À          pairs a  b    k v   a 	  -    - 5   B C ÀÀ 	name_sparsecompact       s merge a  opts   \ 	  -    - 5   B C ÀÀ sortkeyscomment       s merge a  opts   f 	  -    - 5   B C ÀÀ commentindent  sortkeys       s merge a  opts   	 $_½„'   ' ' ' 4 6 *  B' <6 * B' <6 )  B' <5 6	   X€6	 9
   X€6
  3 4  4	  6
   
@@ -2523,7 +2523,7 @@ debug
  &
 BX ÍK  À    Àtostring 204 Output 	send
 	concat
-table nocodecomment	line
+table commentnocode	line
 pcallselect
 printc
 yieldcoroutine€€À™										
@@ -2744,15 +2744,15 @@ _ frame  _ _  len  res 	_ O_  Ostream  Omode  Oresp ;err  ;_ )_  )sta
  6 9  X€6 6 6 96 96 96   X€6   ' B  ' B6  B  X€6  B96  B X	€9  X€ 9' B  X€+    X€6 9   X€6 9!  X€6 9"  X€6 9#  X€6 9$  X€6 9%  X€6 9&  X€6 9'6 9(  X€3) 3* 3+ 2 €  X€9  X€9', B  X€9'- B  X€'.  9/'0 B  X€+ X€+   X€  X€9  X€9'1 B  X€62 93'4 B  X€+ X€+  X€ X	€62 93'5 B  X€+ X€+   X€96  X€96B  '7 B, 4   !	 #  5$8 B!5!9 4"  4#  ,$% )&  +'  +( ))  +* ++ ),  )-  ,./ 40  51: 62; =2;1'2. '3< 34= 35> 36? B697@6=7@97A6=7A+7  =7B=37C 38D 39E 3:F 3;G 3<H 3=I 3>J 3?K 3@L 3AM 3BN 3CO 3DP 3EQ 3FR 3GS 3HT 3IU 3JV 3KW ,LM 3NX 3OY 3PZ 3Q[ 3R\ 3S] 3T^ 3U_ +V  3W` +X  3Ya =9b=:c=Od=Re=Qf=Ug=Kh=Ni=Sj=T6=Yk=Wl=Hm3Zo =Zn+Z  =Z%=Jp  XZ€9Zr Z X[€ZH =Zq+Z  =Zs3Zu =Zt2  €L  basedironscratch	exitonexitoutput 
 pause	done	coro	moaion
 startconnecthandlescratchpad	looplistenremovebreakpointsetbreakpoint                               linemap	dump	line   )execution aborted at default debugee
-print   
-STACKRESTART
+print   RESTART
 WATCH
-BREAK __modekbuiltins.scripts.socketoff/library
+BREAK
+STACK __modekbuiltins.scripts.socketoff/library
 /proc	openioDYLD_LIBRARY_PATH[Ww]indows
 matchOSWINDIR   	wrapstatus_status
 yield_yieldresume_resumecreate_createcoroutinengx	type__indexgetmetatableMOAICoroutinejit	_ENV_G	findsub	gsubstringrawgetunpack
 tablesetmetatable
 pairs	loadloadstringsetfenvgetfenv
-errorlcr	portMOBDEBUG_PORTtonumbergetenv _DESCRIPTION<Mobile Remote Debugger for the Lua programming languagecheckcountÈ_COPYRIGHTPaul Kulchenko_VERSION	0.70
-_NAMEmobdebugyieldtimeoutû¨¸½áõÑüconnecttimeout osrequire                         ! " # # # # $ % & ' ' ' ' ' ( ) ) ) ) ) ) 2 2 2 2 3 3 3 3 4 4 4 4 < < < < < < < < < = = = = = = = = = = = = = = = > > > > > > > > ? ? ? ? ? ? ? ? @ @ @ @ @ @ @ @ A A A A A A A A B B D D N O S S \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ d d d d d d d f f f g i i i i i j k l m o p q r s t u v w y z z z { |  ‚ ![bin™ËÒŞéôû,Ğæêş".0j©íñõ!Œ´¾ÀÓÖ×ØÙÚÛÜİŞßàáâããääåæææææææççèèêêrequire ¢os œmobdebug HOOKMASK Œerror ‹getfenv Šsetfenv ‰loadstring …pairs „setmetatable ƒtonumber ‚unpack ırawget ügsub ösub  öfind  ögenv òjit îMOAICoroutine êmetagindex 	ángx Òcorocreate Êcororesume Âcoroyield ºcorostatus ²corowrap °findenv win ‘mac |iscasepreserving osocket 
+errorlcr	portMOBDEBUG_PORTtonumbergetenv yieldtimeoutû¨¸½áõÑü
+_NAMEmobdebugcheckcountÈ_COPYRIGHTPaul Kulchenko_DESCRIPTION<Mobile Remote Debugger for the Lua programming languageconnecttimeout_VERSION	0.70 osrequire                         ! " # # # # $ % & ' ' ' ' ' ( ) ) ) ) ) ) 2 2 2 2 3 3 3 3 4 4 4 4 < < < < < < < < < = = = = = = = = = = = = = = = > > > > > > > > ? ? ? ? ? ? ? ? @ @ @ @ @ @ @ @ A A A A A A A A B B D D N O S S \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ d d d d d d d f f f g i i i i i j k l m o p q r s t u v w y z z z { |  ‚ ![bin™ËÒŞéôû,Ğæêş".0j©íñõ!Œ´¾ÀÓÖ×ØÙÚÛÜİŞßàáâããääåæææææææççèèêêrequire ¢os œmobdebug HOOKMASK Œerror ‹getfenv Šsetfenv ‰loadstring …pairs „setmetatable ƒtonumber ‚unpack ırawget ügsub ösub  öfind  ögenv òjit îMOAICoroutine êmetagindex 	ángx Òcorocreate Êcororesume Âcoroyield ºcorostatus ²corowrap °findenv win ‘mac |iscasepreserving osocket 
 ecoro_debugger dcoro_debugee  dcoroutines cevents ^breakpoints ]watches \lastsource [lastfile  [watchescnt Zabort Yseen_hook Xcheckcount Wstep_into Vstep_over Ustep_level Tstack_level Sserver Rbuf  Routputs Qiobase Nbasedir Mdeferror Ldebugee Kq Jserpent Hremovebasedir @stack ?set_breakpoint >remove_breakpoint =has_breakpoint <restore_vars ;capture_vars :stack_depth 9is_safe 8in_debugger 7is_pending 6readnext 5handle_breakpoint 4normalize_path 3debug_hook 2stringify_results 1isrunning 0done /debugger_loop .output -connect ,lasthost +lastport  +start *listen )controller (scratchpad 'loop &on %off $handle #cocreate "coro !moconew  moai   builtins.scripts.socket/builtins/scripts/socket.luac" 

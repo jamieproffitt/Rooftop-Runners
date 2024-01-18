@@ -338,12 +338,12 @@ convex_hulls {
 convex_hulls {
   index: 378
   count: 6
-  collision_group: ""
+  collision_group: "default"
 }
 convex_hulls {
   index: 384
   count: 6
-  collision_group: ""
+  collision_group: "default"
 }
 convex_hulls {
   index: 390

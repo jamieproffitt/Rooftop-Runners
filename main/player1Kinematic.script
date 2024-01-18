@@ -86,7 +86,7 @@ end
 
 function checkFall(self)
 	local pos = go.get_position()
-	if pos.y < -100 then
+	if pos.y < -500 then
 		go.set_position(self.safePosition)
 	end
 end

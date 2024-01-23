@@ -1,5 +1,5 @@
 go.property("angular_velocity", 3)
-FRICTION = 20
+FRICTION = 40
 JUMP_VELOCITY =  500
 GRAVITY = 10
 
@@ -152,6 +152,7 @@ end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("contact_point_response") then
+		print(message.other_group)
 		if message.other_group == hash("default") then
 			self.canJump = true
 			self.onGround = true

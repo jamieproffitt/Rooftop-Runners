@@ -16,16 +16,7 @@ end
 function update(self, dt)
 	local rotation = go.get_rotation()
 	local world_position = go.get_world_position()
-	if self.jump_force == 1 then
-		if jump_counter < 50 then
-			jump_counter = jump_counter + 1
-			print(self.jump_force)
-			msg.post("#collisionobject", "apply_force", { force = vmath.rotate(rotation, vmath.vector3(0,5000,0)), position = go.get_world_position()})
-		else
-			jump_counter = 0
-			self.jump_force = 0
-		end
-	end
+	msg.post("#collisionobject", "apply_force", { force = vmath.rotate(rotation, vmath.vector3(0,100,0)), position = go.get_world_position()})
 	msg.post("#collisionobject", "apply_force", { force = vmath.rotate(rotation, self.rotation_direction), position = world_position + vmath.rotate(rotation, vmath.vector3(-50, 50, 0)) })
 	msg.post("#collisionobject", "apply_force", { force = vmath.rotate(rotation, -self.rotation_direction), position = world_position + vmath.rotate(rotation, vmath.vector3(50, -50, 0)) })
 	if self.roation_direction == nil then

@@ -20,5 +20,7 @@ default_texture_mag_filter = nearest
 
 [physics]
 debug = 0
-gravity_y = -184.0
+gravity_y = -200.0
+gravity_x = 0.0
+scale = 1.0
 
